@@ -3,6 +3,9 @@ import BookShelf from './BookShelf'
 import {Link} from 'react-router-dom'
 
 class Home extends Component {
+  componentDidMount(){
+    this.props.getAllBooks()
+  }
     render() {
         return (
             <div className="list-books">
@@ -17,7 +20,7 @@ class Home extends Component {
               </div>
             </div>
             <div className="open-search">
-              <Link to="/search" onClick={() => this.setState({ showSearchPage: true })}>Add a book</Link>
+              <Link to="/search">Add a book</Link>
             </div>
           </div>
         )
