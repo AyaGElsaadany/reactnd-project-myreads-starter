@@ -31,6 +31,10 @@ class Search extends Component {
 
       
       //console.log(this.state.mappedBooks)
+    } else {
+      this.setState(() => ({
+        booksToShow: []
+      }))
     }
   }
 
